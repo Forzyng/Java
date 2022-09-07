@@ -1,3 +1,4 @@
+import MyStream.BaseStream;
 import MyThreads.MyExchanger.WorkExchanger;
 import MyThreads.MyNotifyWait.Consumer;
 import MyThreads.MyNotifyWait.Producer;
@@ -24,8 +25,11 @@ public class Main {
         new Thread(consumer).start();*/
         /*MySemaphore sem = new MySemaphore();
         sem.run();*/
-        WorkExchanger workExchanger = new WorkExchanger();
-        workExchanger.run();
+        /*WorkExchanger workExchanger = new WorkExchanger();
+        workExchanger.run();*/
+
+        BaseStream baseStream = new BaseStream();
+        baseStream.run();
 
         System.out.println("===Main Finished===");
     }
