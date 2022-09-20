@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>HI</h1>
+<h2>Opened: <span th:text="${count}"></span></h2>
+<h3>Elements in Array</h3>
+<ul th:each="el: ${arr}">
+    <li th:text="${el}"></li>
+</ul>
+<img src="/img/houses/Apartments.jpg">
+</body>
+</html>

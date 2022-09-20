@@ -1,39 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4824c91-331e-4378-8a32-7705fd7ed0eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Animals/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Animals/Crocodile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Animals/Kangaroo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Animals/Tiger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/MoneyAndProduct/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/MoneyAndProduct/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Peoples/Builder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Peoples/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Peoples/Pilot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Peoples/Sailor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/client/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/client/MyClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myPhoneBook/src/MyStream/BaseStream.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/server.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/src/MyConnect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/src/MyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dz/Dz 17-08/Dz 17-08.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/Dz 17-08.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Dz/Dz 17-08/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myPhoneBook/out/production/myPhoneBook/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../myPhoneBook/out/production/myPhoneBook/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../myPhoneBook/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../myPhoneBook/src/Main.java" afterDir="false" />
+    <list default="true" id="c4824c91-331e-4378-8a32-7705fd7ed0eb" name="Changes" comment="Server">
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/main/java/org/example/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,14 +39,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Programming/Projects/Java"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programming/Projects/Java&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -90,7 +70,17 @@
       <option name="presentableId" value="Default" />
       <updated>1662477917147</updated>
       <workItem from="1662477918314" duration="3726000" />
+      <workItem from="1662562844129" duration="1865000" />
+      <workItem from="1662638025244" duration="33000" />
     </task>
+    <task id="LOCAL-00001" summary="Server">
+      <created>1662563372602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1662563372602</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +96,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Server" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server" />
   </component>
 </project>

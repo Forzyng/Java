@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd914116-81f1-46b5-8267-bc4cb4623fd8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/src/main/java/com/example/newspring/NewSpringApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Dz/newSpring/src/test/java/com/example/newspring/NewSpringApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/ContactFormController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/portfolio/PortfolioItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/entities/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/entities/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/entities/portfolio/PortfolioItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/repos/ContactRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/repos/Portfolio/PortfolioItemRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/repos/PostRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/static/img/houses/Apartments.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/static/img/houses/Cape Cod.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/static/img/houses/Colonial.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../firstSpring/src/main/resources/templates/portfolio/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/main/java/org/example/Calculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mav/src/test/java/org/example/CalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../client/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../client/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2F226zn7cdvOEf89NsZ6t43Rhjx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Programming/Projects/Java"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="NewSpringApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="newSpring" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.newspring.NewSpringApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd914116-81f1-46b5-8267-bc4cb4623fd8" name="Changes" comment="" />
+      <created>1663675689115</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663675689115</updated>
+      <workItem from="1663675690350" duration="82000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
