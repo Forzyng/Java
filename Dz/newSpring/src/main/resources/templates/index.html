@@ -36,7 +36,7 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="/index">This is Massively</a></li>
+							<li class="active"><a href="/">This is Massively</a></li>
 							<li><a href="/generic">Generic Page</a></li>
 							<li><a href="/elements">Elements Reference</a></li>
 						</ul>
@@ -163,7 +163,18 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<div>
+								<h1>All elements</h1>
+								<ul th:each="el: ${contacts}">
+									<li th:text="${el.email}"></li>
+									<h6>
+										<a th:href="@{/contacts/update/{id}(id=${el.id})}">Redact</a> <!--//@{/contacts/update(id=${el.id})}        <a th:href="@{/category/edit/{id}(id=${category.idCategory})}">view</a>
+-->
+										<a th:href="@{/contacts/delete/{id}(id=${el.id})}" style="padding-left: 10px">Delete</a>
+									</h6>
+								</ul>
+							</div>
+							<form action="/contacts/create" method="post">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -179,7 +190,7 @@
 									</div>
 								</div>
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Create" /></li>
 								</ul>
 							</form>
 						</section>
