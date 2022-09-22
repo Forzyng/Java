@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.UUID;
 
-public interface PortfolioItemRepository extends CrudRepository<PortfolioItem, UUID> {
+public interface PortfolioItemRepository extends CrudRepository<PortfolioItem, Long> {
 
 }

@@ -9,25 +9,38 @@ import javax.persistence.*;
 import javax.persistence.criteria.CriteriaBuilder;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
 @Data
 public class PortfolioItem {
+    //*---------------------------------
+    // One to Many
+    @ManyToOne
+    @JoinColumn(name = "category_id")
+    private PortfolioCategory category;
+
+    //*---------------------------------
+    // Many to Many
+    @ManyToMany
+    private Set<PortfolioTag> tags = new HashSet<>();
+
+
+    //*---------------------------------
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private UUID id;
-    private String name;
-    @Column(columnDefinition = "TEXT")
-    private String description;
-    private Integer price;
-    private Integer time;
+    private Long id;
+
+    private String name; // Наименование работы
+    private String mainImg; // Ссылка на главное изображение
+    @Column(columnDefinition="TEXT")
+    private String description; // Опсиание работы
+    private Integer price; // Стоимость
+    private Integer time; // Затраченное время в часах
 
     @CreationTimestamp
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private Date created_at;
-    @LastModifiedDate
-    @Column(name = "updated_at")
-    private LocalDateTime updated_at;
+    private Date created_at; // = new Date();
 }

@@ -2,40 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>All Portfolio</title>
 </head>
 <body>
-<div>
-    <h1>All elements</h1>
-    <ul th:each="el: ${portfolios}">
-        <li th:text="${el.name}"></li>
-    </ul>
-</div>
-<form id="frmContact" method="post" action="/portfolio/create">
-    <div class="form-floating">
-        <input name="name" class="form-control" id="name"
-               type="text" placeholder="Enter your name..." data-sb-validations="required" />
-        <label for="name">Name</label>
-        <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-    </div>
-    <div class="form-floating">
-        <input name="price" class="form-control" id="price" type="number" placeholder="Enter your price..." data-sb-validations="required,email" />
-        <label for="price">Price</label>
-        <div class="invalid-feedback" data-sb-feedback="price:required">An price is required.</div>
-    </div>
-    <div class="form-floating">
-        <input name="time" class="form-control" id="time" type="number" placeholder="Enter your time..." data-sb-validations="required" />
-        <label for="time">Time</label>
-        <div class="invalid-feedback" data-sb-feedback="time:required">A time is required.</div>
-    </div>
-    <div class="form-floating">
-        <textarea name="description" class="form-control" id="description" placeholder="Enter your description here..." style="height: 12rem" data-sb-validations="required"></textarea>
-        <label for="description">Description</label>
-        <div class="invalid-feedback" data-sb-feedback="description:required">A description is required.</div>
-    </div>
-    <br />
-    <!-- Submit Button-->
-    <button class="btn btn-primary text-uppercase" id="submitButton" type="submit">Send</button>
-</form>
+<h1> All Portfolio </h1>
+<a href="/portfolio/create"> Add </a>
+
+<ul th:each="p: ${portfolios}">
+    <li>
+        <span th:text="${p.name}"></span>
+        <span>Category:</span><span th:text="${p.category.name}"></span>
+
+        <a th:href="@{/portfolio/edit/{id}/(id=${p.id})}"> edit  </a>
+        <a th:href="@{|/portfolio/edit/${p.id}|}">edit 2 </a>
+        |
+        <a th:href="@{|/portfolio/delete/${p.id}|}">delete </a>
+        <br>
+        <span th:text="${p.id}"></span>
+
+    </li>
+</ul>
+
 </body>
 </html>
