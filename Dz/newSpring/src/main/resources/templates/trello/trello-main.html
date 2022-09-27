@@ -25,7 +25,7 @@
     <!-- Nav -->
     <nav id="nav">
         <ul class="links">
-            <li><a href="/">This is Massively</a></li>
+            <li><a href="/" class="logo">This is Massively</a></li>
             <li class="active"><a href="/generic">Generic Page</a></li>
             <li><a href="/elements">Elements Reference</a></li>
         </ul>
@@ -41,14 +41,28 @@
     <!-- Footer -->
     <footer id="footer">
         <section>
-            <h1>Edit </h1>
-            <form action="/contacts/create" method="post">
-                <span th:text="${contact.name}"></span>
-                <input type="hidden" name="id" th:field="${contact.id}" >
-                <input type="text" name="email" th:field="${contact.email}" >
-                <input type="text" name="message" th:field="${contact.message}" >
-                <input type="text" name="name" th:field="${contact.name}" >
-                <input type="submit" value="Redact">
+            <div>
+                <h1>All elements</h1>
+                <ul th:each="el: ${boards}">
+                    <li th:text="${el.name}"></li>
+                    <h6>
+                        <a th:href="@{/board/update/{id}(id=${el.id})}">Redact</a> <!--//@{/contacts/update(id=${el.id})}        <a th:href="@{/category/edit/{id}(id=${category.idCategory})}">view</a>
+-->
+                        <a th:href="@{/board/delete/{id}(id=${el.id})}" style="padding-left: 10px">Delete</a>
+                        <a th:href="@{|/board/${el.id}/columns|}" style="padding-left: 10px">Columns</a>
+                    </h6>
+                </ul>
+            </div>
+            <form action="/board/create" method="post">
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name" />
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Create" /></li>
+                </ul>
             </form>
         </section>
         <section class="split contact">

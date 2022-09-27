@@ -4,10 +4,12 @@ import com.itstep.firstspring.entities.portfolio.PortfolioItem;
 import com.itstep.firstspring.repos.Portfolio.PortfolioCategoryRepository;
 import com.itstep.firstspring.repos.Portfolio.PortfolioItemRepository;
 import com.itstep.firstspring.repos.Portfolio.PortfolioTagRepository;
+import com.itstep.firstspring.storage.services.StorageService;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.UUID;
@@ -18,14 +20,18 @@ public class PortfolioItemController {
     private final PortfolioCategoryRepository categoryRepository;
     private final PortfolioTagRepository tagRepository;
 
+    private final StorageService storageService;
+
     public PortfolioItemController(
             PortfolioItemRepository itemRepository,
             PortfolioCategoryRepository categoryRepository,
-            PortfolioTagRepository tagRepository
+            PortfolioTagRepository tagRepository,
+            StorageService storageService
     ) {
         this.itemRepository = itemRepository;
         this.categoryRepository = categoryRepository;
         this.tagRepository = tagRepository;
+        this.storageService = storageService;
     }
 
 
@@ -61,6 +67,7 @@ public class PortfolioItemController {
     public RedirectView store(
             @Param("category_id") long category_id,
             @Param("tags_id") long[] tags_id,
+            @Param("file") MultipartFile file,
             PortfolioItem portfolio
     ){
         portfolio.setCategory(categoryRepository.findById(category_id).get());
@@ -75,6 +82,9 @@ public class PortfolioItemController {
         }
        // portfolio.getTags().add( tagRepository.findById(tags_id[0]).get() );
 
+        //
+        storageService.store(file);
+        portfolio.setMainImg(file.getName()); //    ../../../../upload-dir file.getOriginalFilename()
         itemRepository.save(portfolio);
         return new RedirectView("/portfolio");
     }

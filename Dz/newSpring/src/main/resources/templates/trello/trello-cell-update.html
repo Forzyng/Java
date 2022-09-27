@@ -25,7 +25,7 @@
     <!-- Nav -->
     <nav id="nav">
         <ul class="links">
-            <li><a href="/">This is Massively</a></li>
+            <li><a href="/" >This is Massively</a></li>
             <li class="active"><a href="/generic">Generic Page</a></li>
             <li><a href="/elements">Elements Reference</a></li>
         </ul>
@@ -42,12 +42,20 @@
     <footer id="footer">
         <section>
             <h1>Edit </h1>
-            <form action="/contacts/create" method="post">
-                <span th:text="${contact.name}"></span>
-                <input type="hidden" name="id" th:field="${contact.id}" >
-                <input type="text" name="email" th:field="${contact.email}" >
-                <input type="text" name="message" th:field="${contact.message}" >
-                <input type="text" name="name" th:field="${contact.name}" >
+            <form action="/column/update" method="post">
+                <span th:text="${column.name}"></span>
+                <input type="hidden" name="id" th:field="${column.id}" >
+                <input type="text" name="name" th:field="${column.name}" >
+
+                <div class="field">
+                    <label>Board</label>
+                    <select name="board_id">
+                        <option
+                                th:each="board: ${boards}"
+                                th:value="${board.id}"
+                                th:text="${board.name}"></option>
+                    </select>
+                </div>
                 <input type="submit" value="Redact">
             </form>
         </section>
