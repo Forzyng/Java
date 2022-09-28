@@ -43,20 +43,22 @@
     <section>
       <div>
         <h1>All elements</h1>
-        <ul th:each="el: ${columns}">
-          <li th:text="${el.name}"></li>
+        <ul th:each="el: ${cells}">
+          <li th:text="${el.text}"></li>
           <h6>
-            <a th:href="@{|/board/${board_id}/column/update/${el.id}|}">Redact</a> <!--//@{/contacts/update(id=${el.id})}  /board/{board_id}/column/update/{id}       <a th:href="@{/category/edit/{id}(id=${category.idCategory})}">view</a>
+            <a th:href="@{|/board/${board_id}/column/${column_id}/cell/update/${el.id}|}">Redact</a> <!--//@{/contacts/update(id=${el.id})}  "/board/{board_id}/column/{column_id}/cell/update/{id}"      <a th:href="@{/category/edit/{id}(id=${category.idCategory})}">view</a>
 -->
-            <a th:href="@{|/board/${board_id}/column/delete/${el.id}|}" style="padding-left: 10px">Delete</a>
+            <a th:href="@{|/board/${board_id}/column/${column_id}/cell/delete/${el.id}|}" style="padding-left: 10px">Delete</a>
+
+
           </h6>
         </ul>
       </div>
-      <form action="#" th:action="@{|/board/${board_id}/column/create|}" method="post"><!-- -->
+      <form action="#" th:action="@{|/board/${board_id}/column/${column_id}/cell/create|}" method="post"><!--/board/{board_id}/column/{column_id}/cells -->
         <div class="fields">
           <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" />
+            <label for="text">Text</label>
+            <input type="text" name="text" id="text" />
           </div>
         </div>
         <ul class="actions">

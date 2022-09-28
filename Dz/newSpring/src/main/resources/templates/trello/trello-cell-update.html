@@ -42,16 +42,24 @@
     <footer id="footer">
         <section>
             <h1>Edit </h1>
-            <form action="/column/update" method="post">
-                <span th:text="${column.name}"></span>
-                <input type="hidden" name="id" th:field="${column.id}" >
-                <input type="text" name="name" th:field="${column.name}" >
+            <form action="/cell/update" method="post">
+                <span>Cell</span>
+                <input type="hidden" name="id" th:field="${cell.id}" >
+                <input type="text" name="name" th:field="${cell.text}" >
 
                 <div class="field">
-                    <label>Board</label>
-                    <select name="board_id">
+                    <label>Column</label>
+                    <select name="column_id">
                         <option
-                                th:each="board: ${boards}"
+                                th:each="column: ${columns}"
+                                th:value="${column.id}"
+                                th:text="${column.name}"></option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label>Board</label>
+                    <select name="board_id" disabled="true" th:field="*{board.id}">
+                        <option
                                 th:value="${board.id}"
                                 th:text="${board.name}"></option>
                     </select>

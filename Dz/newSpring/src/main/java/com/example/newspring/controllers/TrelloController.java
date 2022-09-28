@@ -114,18 +114,70 @@ public class TrelloController {
         return "/trello/trello-column-update";
     }
 
-    // Delete board
+    // Delete column
 
     @GetMapping("/board/{board_id}/column/delete/{id}")
     public RedirectView deleteColumn(
             @PathVariable(name="id") Long id,
             @PathVariable(name="board_id") Long board_id) {
 
+        List<Cell> listCells = cellRepository.findAllByColumnId(id);
+        for (Cell cell: listCells
+        ) {
+            cellRepository.deleteById(cell.getId());
+        }
         columnTrelloRepository.deleteById(id);
         return new RedirectView("/board/" + board_id +"/columns");
     }
 
-    // Create board
+    ////////////////////// CELLS ///////////////////////////
+
+
+    @GetMapping("/board/{board_id}/column/{column_id}/cells")
+    public String cells(Model model, @PathVariable(name="column_id") Long column_id, @PathVariable String board_id){
+        model.addAttribute("cells", cellRepository.findAllByColumnId(column_id));
+        model.addAttribute("column_id", column_id);
+        model.addAttribute("board_id", board_id);
+        return "/trello/trello-cell";
+    }
+
+    @PostMapping("/board/{board_id}/column/{column_id}/cell/create")
+    public RedirectView createCell(Cell cell, @PathVariable(name="board_id") Long board_id, @PathVariable Long column_id){
+        cell.setColumn(columnTrelloRepository.findById(column_id).get());
+        cellRepository.save(cell);
+        return new RedirectView("/board/"+ board_id +"/column/" + column_id + "/cells");
+    }
+
+    @PostMapping("/cell/update")
+    public RedirectView tryUpdateCell(Cell cell, @Param("column_id") Long column_id, @Param("board_id") Long board_id){
+
+        cell.setColumn(columnTrelloRepository.findById(column_id).get());
+        cellRepository.save(cell);
+        return new RedirectView("/board/"+ board_id +"/column/" + column_id + "/cells");
+    }
+
+    @GetMapping("/board/{board_id}/column/{column_id}/cell/update/{id}")
+    public String updateRCell(
+            Model model,
+            @PathVariable(name="id") Long id,
+            @PathVariable(name="board_id") Long board_id, @PathVariable Long column_id){
+        model.addAttribute("columns", columnTrelloRepository.findAll());
+        model.addAttribute("board", boardRepository.findById(board_id).get());
+        Cell p = cellRepository.findById(id).get();
+        model.addAttribute("cell", p);
+        return "/trello/trello-cell-update";
+    }
+
+    // Delete board
+
+    @GetMapping("/board/{board_id}/column/{column_id}/cell/delete/{id}")
+    public RedirectView deleteCell(
+            @PathVariable(name="id") Long id,
+            @PathVariable(name="board_id") Long board_id, @PathVariable String column_id) {
+
+        cellRepository.deleteById(id);
+        return new RedirectView("/board/"+ board_id +"/column/" + column_id + "/cells");
+    }
 
 
 }
