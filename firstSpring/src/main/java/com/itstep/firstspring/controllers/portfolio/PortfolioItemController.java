@@ -74,17 +74,17 @@ public class PortfolioItemController {
 //        itemRepository.save(portfolio);
 
         // ArrayList<PortfolioTag> tags = new ArrayList<>();
-        for (int i = 0; i < tags_id.length; i++)
+       /* for (int i = 0; i < tags_id.length; i++)
         {
 
             portfolio.getTags().add( tagRepository.findById(tags_id[i]).get() );
             //   tags.add(tagRepository.findById(tags_id[i]).get());
-        }
+        }*/
        // portfolio.getTags().add( tagRepository.findById(tags_id[0]).get() );
 
         //
         storageService.store(file);
-        portfolio.setMainImg(file.getName()); //    ../../../../upload-dir file.getOriginalFilename()
+        portfolio.setMainImg(file.getOriginalFilename()); //    ../../../../upload-dir file.getOriginalFilename()
         itemRepository.save(portfolio);
         return new RedirectView("/portfolio");
     }

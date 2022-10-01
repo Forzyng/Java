@@ -23,8 +23,9 @@ public class ColumnTrello {
     @ManyToOne
     @JoinColumn(name = "board_id", nullable = false)
     private Board board;
-    @ManyToMany
-    private Set<Cell> cells = new HashSet<>();
+    @OneToMany
+    @JoinColumn(name = "column_id")
+    private Set<Cell> cells;
 
 
     private String name;

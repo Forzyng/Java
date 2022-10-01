@@ -58,11 +58,12 @@
                 </div>
                 <div class="field">
                     <label>Board</label>
-                    <select name="board_id" disabled="true" th:field="*{board.id}">
+                    <input type="hidden" name="board_id" th:value="${board.id}">
+                  <!--  <select >
                         <option
-                                th:value="${board.id}"
+
                                 th:text="${board.name}"></option>
-                    </select>
+                    </select>-->
                 </div>
                 <input type="submit" value="Redact">
             </form>

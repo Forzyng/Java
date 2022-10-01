@@ -17,12 +17,13 @@
         <!--<img th:src="@{${'/img/' + players.id +'_'+ players.name + '.png'}}" width="120"/>-->
         <!--<img src="${basedir}/upload-dir/ava.png">
         <img src="../../../../upload-dir/ava.png">-->
-        <a th:href="@{/portfolio/edit/{id}/(id=${p.id})}"> edit  </a>
-        <a th:href="@{|/portfolio/edit/${p.id}|}">edit 2 </a>
+        <a th:href="@{|/portfolio/edit/${p.id}|}">edit </a>
         |
         <a th:href="@{|/portfolio/delete/${p.id}|}">delete </a>
         <br>
         <span th:text="${p.id}"></span>
+        <br>
+        <img style="width: 200px" th:src="@{${'http://localhost:8080/' + p.mainImg}}">
 
     </li>
 </ul>

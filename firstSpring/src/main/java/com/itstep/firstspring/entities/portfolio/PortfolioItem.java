@@ -25,7 +25,7 @@ public class PortfolioItem {
     //*---------------------------------
     // Many to Many
     @ManyToMany
-    private Set<PortfolioTag> tags = new HashSet<>();
+    private Set<PortfolioTag> tags = new HashSet<PortfolioTag>();
 
 
     //*---------------------------------

@@ -21,7 +21,8 @@ public class Board {
     private Long id;
 
 
-    @ManyToMany
+    @OneToMany
+    @JoinColumn(name = "board_id")
     private Set<ColumnTrello> columns = new HashSet<>();
 
 
