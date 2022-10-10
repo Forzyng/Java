@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="961722c9-759d-4547-af80-85393628adb5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/.vscode/extensions.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/assets/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/assets/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/Auth/LoginForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/HelloWorld.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/TheWelcome.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/WelcomeItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/__tests__/HelloWorld.spec.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconCommunity.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconDocumentation.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconEcosystem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconSupport.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconTooling.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/stores/counter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/AboutView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/CreatePostPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/EmailVerifyPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/ForgotPasswordPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/HomeView.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/MyProfilePage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/OneUserPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageAbout.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageContacts.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageError404.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageHome.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PostsPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/RedactPostPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/RedactProfile.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/ResetPasswordPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/SentEmailPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/SinglePostPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/SuccessPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vue-front-end/vite.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-boot-react-oauth2-social-login-demo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-data-redis" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/spring-reg-auth-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/FileUploadController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2FucuzenclL4n0eeewS1WSrsCNO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Programming/Projects/Java/Every_Restaurant/vue-front-end/src/views",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="961722c9-759d-4547-af80-85393628adb5" name="Changes" comment="" />
+      <created>1665345635339</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665345635339</updated>
+      <workItem from="1665345636519" duration="4733000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

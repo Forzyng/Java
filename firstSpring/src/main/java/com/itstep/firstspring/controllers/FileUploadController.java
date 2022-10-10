@@ -1,5 +1,8 @@
 package com.itstep.firstspring.controllers;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.util.stream.Collectors;
 
@@ -21,6 +24,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.method.annotation.MvcUriComponentsBuilder;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.imageio.ImageIO;
 
 
 @Controller
@@ -32,7 +36,27 @@ public class FileUploadController {
     public FileUploadController(StorageService storageService) {
         this.storageService = storageService;
     }
+    @GetMapping("/test_webp")
+    public String convertTest()
+    {
+        try {
+            //Read JPG image
+            BufferedImage image = ImageIO.read(new File("C:/Temp/f.jpeg"));
 
+            BufferedImage resizedImage = new BufferedImage(100, 100, BufferedImage.TYPE_INT_RGB);
+            Graphics2D graphics2D = resizedImage.createGraphics();
+            graphics2D.drawImage(image, 0, 0, 100, 100, null);
+            graphics2D.dispose();
+
+            // Encode it as webp using default settings and save it as webp file
+            ImageIO.write(resizedImage, "webp", new File("C:/Temp/out.webp"));
+        }
+        catch (Exception ex) {
+            return ex.getMessage();
+        }
+
+        return "Ok";
+    }
     @GetMapping("/")
     public String listUploadedFiles(Model model) throws IOException {
 
