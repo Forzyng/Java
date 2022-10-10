@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import UserRedactProfile from "../components/Profile/User-Redact-Profile";
+import UserRedactProfile from "../components/Profile/User-Redact-Profile.vue";
 export default {
     name: "RedactProfile",
     components: {UserRedactProfile}

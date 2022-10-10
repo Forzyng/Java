@@ -4,7 +4,7 @@
 
 <script>
 
-import UserProfile from "../components/Profile/User-Profile";
+import UserProfile from "../components/Profile/User-Profile.vue";
 export default {
     name: "MyProfilePage",
     components: {UserProfile}

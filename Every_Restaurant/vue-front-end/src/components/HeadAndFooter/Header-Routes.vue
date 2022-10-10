@@ -30,8 +30,9 @@
 </template>
 
 <script>
-import {useAuthStore} from "../../store/auth";
-import {useUserStore} from "../../store/user";
+
+import {useAuthStore} from "../../stores/auth";
+
 export default {
   name: 'Header-Routes',
   setup () {

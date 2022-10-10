@@ -1,10 +1,10 @@
 <template>
-<h1>Contacts</h1>
+Reg
 </template>
 
 <script>
 export default {
-    name: "PageContacts"
+  name: "RegistrationForm"
 }
 </script>
 

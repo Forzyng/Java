@@ -1,62 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="961722c9-759d-4547-af80-85393628adb5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/.eslintrc.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/.vscode/extensions.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/assets/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/assets/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/assets/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/Auth/LoginForm.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/TheWelcome.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/WelcomeItem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/__tests__/HelloWorld.spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconCommunity.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconDocumentation.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconEcosystem.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconSupport.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconTooling.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/router/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/stores/counter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/AboutView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/CreatePostPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/EmailVerifyPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/ForgotPasswordPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/HomeView.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/MyProfilePage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/OneUserPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageAbout.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageContacts.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageError404.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PageHome.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/PostsPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/RedactPostPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/RedactProfile.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/ResetPasswordPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/SentEmailPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/SinglePostPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/src/views/SuccessPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vue-front-end/vite.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-boot-react-oauth2-social-login-demo" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-data-redis" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/spring-reg-auth-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-reg-auth-master/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/FileUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../firstSpring/src/main/java/com/itstep/firstspring/controllers/FileUploadController.java" afterDir="false" />
+    <list default="true" id="961722c9-759d-4547-af80-85393628adb5" name="Changes" comment="Front + oauth2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/.eslintrc.cjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/.prettierrc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/assets/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/assets/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/assets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Auth/LoginForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/EmailConfirmation/AlreadyConfirmed.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/EmailConfirmation/EmailConfirmed.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/EmailConfirmation/SentEmailComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/ForgotPassowd/ForgotPasswordComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/ForgotPassowd/PasswordChanged.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/ForgotPassowd/ResetPassword.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/HeadAndFooter/Header-Routes.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/HeadAndFooter/StaticFooter.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Loading/LoadingComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Post/CreatePost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Post/RedactPost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Post/SinglePost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Profile/OneUserProfile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Profile/User-Profile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/Profile/User-Redact-Profile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/TheWelcome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/WelcomeItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/__tests__/HelloWorld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconCommunity.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconDocumentation.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconEcosystem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconSupport.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/components/icons/IconTooling.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/stores/counter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/AboutView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/CreatePostPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/EmailVerifyPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/ForgotPasswordPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/HomeView.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/LoginPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/MyProfilePage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/OneUserPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/PageAbout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/PageContacts.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/PageError404.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/PageHome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/PostsPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/RedactPostPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/RedactProfile.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/ResetPasswordPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/SentEmailPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/SinglePostPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/src/views/SuccessPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue-front-end/vite.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sarafan" beforeDir="false" afterPath="$PROJECT_DIR$/../sarafan" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot-react-oauth2-social-login-demo" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-react-oauth2-social-login-demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../spring-boot2-oauth2-auth-server-jwt-mysql" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot2-oauth2-auth-server-jwt-mysql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tutorials" beforeDir="false" afterPath="$PROJECT_DIR$/../tutorials" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +104,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Programming/Projects/Java/Every_Restaurant/vue-front-end/src/views",
+    "last_opened_file_path": "D:/Programming/Projects/Java/Every_Restaurant/vue-front-end",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,6 +113,13 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\Projects\Java\Every_Restaurant\vue-front-end\src\components" />
+      <recent name="D:\Programming\Projects\Java\Every_Restaurant\vue-front-end\src\stores" />
+      <recent name="D:\Programming\Projects\Java\Every_Restaurant\vue-front-end\src\views" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -110,8 +128,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665345635339</updated>
-      <workItem from="1665345636519" duration="4733000" />
+      <workItem from="1665345636519" duration="9468000" />
+      <workItem from="1665437001521" duration="50000" />
     </task>
+    <task id="LOCAL-00001" summary="Front + oauth2">
+      <created>1665432441387</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665432441387</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,5 +157,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Front + oauth2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Front + oauth2" />
   </component>
 </project>

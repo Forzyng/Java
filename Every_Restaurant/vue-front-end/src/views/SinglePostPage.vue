@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import SinglePost from "../components/Post/SinglePost";
+import SinglePost from "../components/Post/SinglePost.vue";
 export default {
     name: "SinglePostPage",
     components: {SinglePost}

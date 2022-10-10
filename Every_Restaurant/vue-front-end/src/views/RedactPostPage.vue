@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import RedactPost from "../components/Post/RedactPost";
+import RedactPost from "../components/Post/RedactPost.vue";
 export default {
     name: "RedactPostPage",
     components: {RedactPost}

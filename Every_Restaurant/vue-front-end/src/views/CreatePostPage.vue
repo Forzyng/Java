@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import CreatePost from "../components/Post/CreatePost";
+import CreatePost from "../components/Post/CreatePost.vue";
 export default {
     name: "CreatePostPage",
     components: {CreatePost}
