@@ -1,15 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <search-section></search-section>
+  <AboutComponent></AboutComponent>
 </template>
 
 <style>
 @media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+
 }
 </style>
+<script>
+
+import AboutComponent from "../components/Home/About/AboutComponent.vue";
+import SearchSection from "../components/Head-Footer-Other/SearchSection.vue";
+export default {
+  components: {SearchSection, AboutComponent}
+}
+</script>

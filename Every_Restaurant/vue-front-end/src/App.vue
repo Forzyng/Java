@@ -1,6 +1,6 @@
 <script setup>
-import HeaderRoutes from "./components/HeadAndFooter/Header-Routes.vue";
-import StaticFooter from "./components/HeadAndFooter/StaticFooter.vue";
+import HeaderRoutes from "./components/Head-Footer-Other/Header-Routes.vue";
+import StaticFooter from "./components/Head-Footer-Other/StaticFooter.vue";
 </script>
 
 <template>
