@@ -2,7 +2,7 @@
 import {useToastStore} from "./toast";
 import {useAuthStore} from "./auth";
 
-const serverUrl = 'http://127.0.0.1:8000/api'
+const serverUrl = 'http://localhost:8080'
 
 export const api = {
 
@@ -16,13 +16,13 @@ export const api = {
         console.log("check")
         if (auth.jwt !== null)
         {
-            options.headers['Authorization'] = 'bearer ' + auth.jwt
+            options.headers['Authorization'] = 'Bearer ' + auth.jwt
             console.log(auth.jwt)
         }
 
         return new Promise((resolve, reject) => {
 
-            fetch(serverUrl + url)
+            fetch(serverUrl + url, options)
                 .then(res => {
                     return res.json()
                 })

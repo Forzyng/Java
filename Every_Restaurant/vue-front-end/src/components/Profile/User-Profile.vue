@@ -1,7 +1,7 @@
 <template>
     <div v-if="!store.isLoaded">
         <!-- here put a spinner or whatever you want to indicate that a request is in progress -->
-        <LoadingComponent></LoadingComponent>
+      <loading-component></loading-component>
     </div>
     <div v-else>
   <section style="background-color: #ebebeb;">
@@ -11,7 +11,7 @@
         <div class="col-lg-4">
           <div class="card mb-4">
             <div class="card-body text-center">
-              <img v-bind:src="'/storage/' + store.user.avatar" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+              <img v-bind:src="store.user.imageUrl" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
               <h5 class="my-3">{{ UserLogin }}</h5>
               <p class="text-muted mb-1"> {{ UserFullName }}</p>
               <div class="d-flex justify-content-center mb-1">
@@ -32,7 +32,7 @@
         <div class="col-lg-8">
           <div class="card mb-4">
             <div class="card-body">
-              <div class="row">
+              <div class="row"  v-if="UserCreatedAt">
                 <div class="col-sm-3">
                   <p class="mb-0">Here from</p>
                 </div>
@@ -40,7 +40,7 @@
                   <p class="text-muted mb-0" id="CreatedAt">{{ UserCreatedAt }}</p>
                 </div>
               </div>
-              <hr>
+              <hr  v-if="UserCreatedAt">
               <div class="row" v-if="UserFullName">
                 <div class="col-sm-3">
                   <p class="mb-0" id="UpdatedAt">Full name</p>
@@ -50,7 +50,7 @@
                 </div>
               </div>
               <hr v-if="UserFullName">
-              <div class="row">
+              <div class="row"  v-if="UserLogin">
                 <div class="col-sm-3">
                   <p class="mb-0">Login</p>
                 </div>
@@ -58,7 +58,7 @@
                   <p class="text-muted mb-0" id="Login">{{ UserLogin }}</p>
                 </div>
               </div>
-              <hr>
+              <hr v-if="UserLogin">
               <div class="row" v-if="UserDescription">
                 <div class="col-sm-3">
                   <p class="mb-0">Description</p>
@@ -125,8 +125,9 @@
 
 <script>
 
-import {useUserStore} from "../../store/user";
-import LoadingComponent from "../Loading/LoadingComponent";
+
+import {useUserStore} from "../../stores/user";
+import LoadingComponent from "../Loading/LoadingComponent.vue";
 export default {
   name: 'User-Profile',
     components: {LoadingComponent},

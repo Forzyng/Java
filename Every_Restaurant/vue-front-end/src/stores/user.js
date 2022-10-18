@@ -7,9 +7,6 @@ import {useToastStore} from "./toast";
 export const useUserStore = defineStore('user', {
     state: () => (
         {
-            email_verified_at: '',
-            description: '',
-            name: '',
             user: JSON.parse(localStorage.getItem('user')) || null,
             users: [],
             total: 0, // общее количество загруженных постов
@@ -26,17 +23,6 @@ export const useUserStore = defineStore('user', {
     },
     actions: {
         updateUser (payload) {
-            if(payload.description !== null)
-            {
-                this.description = payload.description
-            }
-            else {
-                this.description = ''
-            }
-
-
-            this.name = payload.name
-
             this.rememberUser(payload)
         },
         rememberUser(user)
@@ -171,21 +157,11 @@ export const useUserStore = defineStore('user', {
             this.countPosts = 0
             this.isLoaded = false
            // const toast = useToastStore()
-            const data = new FormData()
-            data.append('login', this.user.login);
 
-            api.post('/get-user-login', data)
+            api.get("/user/me")
                 .then(res=> {
                     //toast.success( "Loaded" )
                     console.log(res)
-                    //this.user = res
-                    //this.isLoaded = true
-                        if(res.token)
-                        {
-                            const AuthStore = useAuthStore()
-                            AuthStore.rememberJwt(res.token)
-                            toast.info( "Try again" )
-                        }
                         if(res.error)
                         {
                             toast.error(res.error)
@@ -194,7 +170,9 @@ export const useUserStore = defineStore('user', {
                             if (res) {
                                 this.forgetUser()
                                 this.updateUser(res);
-                                this.getUsersPosts(this.user.id)
+                                this.isLoaded = true;
+                                toast.success( "Loaded" )
+                                //this.getUsersPosts(this.user.id);
                             }
                         }
                 })
@@ -209,13 +187,6 @@ export const useUserStore = defineStore('user', {
             api.post('/get-posts-id', data)
                 .then(res=> {
                     console.log(res)
-
-                        if(res.token)
-                        {
-                            const AuthStore = useAuthStore()
-                            AuthStore.rememberJwt(res.token)
-                            toast.info( "Try again" )
-                        }
                         if(res.error)
                         {
                             toast.error(res.error)

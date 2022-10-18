@@ -14,10 +14,11 @@ router.beforeEach((to, from, next) => {
     const logedStore = useUserStore()
     if (to.name === 'Login' && logedStore.user) next({ name: 'Home' })
     else if (to.name === 'RedactProfile' && !logedStore.user) next({ name: 'Home' })
+    else if (to.name === 'Oauth2' && logedStore.user) next({ name: 'Home' })
+    else if (to.name === 'Register' && logedStore.user) next({ name: 'Home' })
     else if (to.name === 'MyProfile' && !logedStore.user) next({ name: 'Home' })
-    else if (to.name === 'Post' && !logedStore.user) next({ name: 'Home' })  //CreatePost
-    else if (to.name === 'User' && !logedStore.user) next({ name: 'Home' })
     else if (to.name === 'CreatePost' && !logedStore.user) next({ name: 'Home' })
+    else if (to.name === 'ResetPassword' && !logedStore.user) next({ name: 'Home' })
     else if (to.name === 'RedactPost' && !logedStore.user) next({ name: 'Home' })
     else next()
 })

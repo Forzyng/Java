@@ -21,7 +21,7 @@ export const useAuthStore = defineStore('auth', {
             const data = new FormData()
             data.append('id', userStore.user.id);
 
-            api.post('/DeleteUser', data)
+            api.post('/delete-user', data)
                 .then(res=> {
                     console.log(res)
                     // toast.success( "Loaded" )
@@ -92,6 +92,61 @@ export const useAuthStore = defineStore('auth', {
                 })*/
 
 
+        },tryAuth () {
+            const toast = useToastStore()
+            console.log('Try to auth')
+
+            api.get("/user/me")
+                .then(res => {
+                    if(res.error)
+                    {
+                        toast.error(res.error)
+                    }
+                    else {
+                        if (res) {
+                            console.log('getData: ')
+                            console.log(res)
+                            const curUser = useUserStore();
+                            curUser.updateUser(res)
+                            console.log(res)
+                            //router.push('/my-profile')
+                        }
+                    }
+
+                })
+           /* const toast = useToastStore()
+            console.log('Try to auth')
+
+
+            fetch('http://localhost:8080/user/me', {
+                method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                mode: 'cors', // no-cors, *cors, same-origin
+                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                credentials: 'same-origin', // include, *same-origin, omit
+                headers: {
+                    'Authorization': 'Bearer ' + this.jwt
+                    //'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                redirect: 'follow', // manual, *follow, error
+                referrerPolicy: 'no-referrer', // no-referrer, *client
+            })
+                .then(res => {
+                    return res.json();
+                })
+                .then(json => {
+                    console.log(json)
+                    toast.success("User authorized")
+                    const curUser = useUserStore();
+                    curUser.updateUser(json)
+                    console.log(json)
+                    // this.$router.push({ name: 'home' })
+                    //router.push('/my-profile')
+                })
+                .catch(err => {
+                    toast.error(err)
+                    this.Sending = false
+                })*/
         },
         tryLogin (email, password) {
             const toast = useToastStore()
@@ -113,24 +168,7 @@ export const useAuthStore = defineStore('auth', {
             data.append('email', email);
             data.append('password', password);
 
-            // const res = api.post('auth/login', data)
-            // console.log('tryLogin res: ')
-            // console.log(res)
-
-       /*     api.post('/auth/login', data)
-                .then(res=> {
-
-                    console.log(res)
-                    //toast.success( "You Logged" )
-                    this.rememberJwt(res.authorisation.token)
-                    const curUser = useUserStore();
-                    curUser.updateUser(res.user)
-                    console.log(res.user)
-                    console.log(res.authorisation.token)
-                    router.push('/my-profile')
-                })*/
-
-            fetch('http://127.0.0.1:8000/api/auth/login', {
+            fetch('http://localhost:8080/auth/login', {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -193,7 +231,7 @@ export const useAuthStore = defineStore('auth', {
             data.append('name', login);
 
 
-            fetch('http://127.0.0.1:8000/api/auth/register', {
+            fetch('http://localhost:8080/auth/register', {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached

@@ -43,8 +43,8 @@
 
 <script>
 import {ref} from "vue";
-import {useUserStore} from "../../store/user";
-import {useAuthStore} from "../../store/auth";
+import {useUserStore} from "../../stores/user";
+import {useAuthStore} from "../../stores/auth";
 export default {
   name: 'User-Redact-Profile',
   setup () {

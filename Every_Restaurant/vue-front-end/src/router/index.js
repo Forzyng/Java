@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/RegisterPage.vue')
     },
     {
+      path: '/oauth2/redirect',
+      name: 'Oauth2',
+      component: () => import('../views/OauthRedirect.vue')
+    },
+    {
       path: '/redact-profile',
       name: 'RedactProfile',
       component: () => import('../views/RedactProfile.vue')

@@ -6,7 +6,7 @@ import StaticFooter from "./components/Head-Footer-Other/StaticFooter.vue";
 <template>
  <header-routes></header-routes>
   <router-view/>
-  <static-footer></static-footer>
+<!--  <static-footer></static-footer>-->
 </template>
 
 <style scoped>

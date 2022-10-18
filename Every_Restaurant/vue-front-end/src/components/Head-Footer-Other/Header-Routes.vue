@@ -28,7 +28,7 @@
             </li>
             <li v-if="!store.isAuthenticated"><a href="/login" >Login</a></li>
             <li v-if="!store.isAuthenticated"><a href="/register">Register</a></li>
-            <li v-if="store.isAuthenticated"><a href="/register"  @click="UserLogOut">Logout>Register</a></li>
+            <li v-if="store.isAuthenticated"><a href="/login"  @click="UserLogOut">Logout</a></li>
 
           </ul>
         </nav>
