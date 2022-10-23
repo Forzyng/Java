@@ -2,7 +2,7 @@
   <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
       <div class="col-md-3 border-right">
-        <div class="d-flex flex-column align-items-center text-center p-3 py-5"><span class="font-weight-bold"> Current</span><img v-bind:src="'/storage/' + store.user.avatar" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
+        <div class="d-flex flex-column align-items-center text-center p-3 py-5"><span class="font-weight-bold"> Current</span><img v-bind:src="store.user.avatar" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;">
             <div class="input-group">
             <div class="input-group-prepend">
 <!--              <span  @click="RestoreUserAvatar" :disabled=!store.isLoaded class="input-group-text" id="inputGroupFileAddon01" href="#" ><img src="http://localhost:3000/store/icons/trash_can_icon.png"  style="width:25px;" /></span>-->

@@ -66,6 +66,10 @@ public class AuthController {
             throw new BadRequestException("Email address already in use.");
         }
 
+        if(userRepository.existsByLogin(signUpRequest.getLogin())) {
+            throw new BadRequestException("Login already in use.");
+        }
+
         // Creating user's account
         User user = new User();
         user.setName(signUpRequest.getLogin());
@@ -83,7 +87,7 @@ public class AuthController {
                 .buildAndExpand(result.getId()).toUri();
 
         return ResponseEntity.created(location)
-                .body(new ApiResponse(true, "User registered successfully@"));
+                .body(new ApiResponse(true, "User registered successfully"));
     }
 
 }

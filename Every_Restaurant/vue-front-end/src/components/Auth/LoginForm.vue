@@ -10,13 +10,13 @@
           <form>
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <input type="email" id="email_log" class="form-control form-control-lg" />
+              <input type="email" id="email_log" class="form-control form-control-lg"  v-model="emailForLogin" />
               <label class="form-label" for="email_log">Email address</label>
             </div>
 
             <!-- Password input -->
             <div class="form-outline mb-4">
-              <input type="password" id="password_log" class="form-control form-control-lg" />
+              <input type="password" id="password_log" class="form-control form-control-lg" v-model="passwordForLogin" />
               <label class="form-label" for="password_log">Password</label>
             </div>
 
@@ -32,7 +32,7 @@
 
             <!-- Submit button -->
 
-            <button style="text-align: center;  width: 100%" type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+            <button style="text-align: center;  width: 100%" type="button" class="btn btn-primary btn-lg btn-block" @click="tryLogin" :disabled=canSendLoginForm>Sign in</button>
 
             <div class="divider d-flex align-items-center my-4">
               <p class="text-center fw-bold mx-3 mb-0 text-muted mx-auto">OR</p>
@@ -56,6 +56,7 @@
 <script>
 
 import {useAuthStore} from "../../stores/auth.js";
+import {ref} from "vue";
 
 export default {
   name: "LoginForm",
@@ -68,34 +69,32 @@ export default {
      const FACEBOOK_AUTH_URL = API_BASE_URL + '/oauth2/authorize/facebook?redirect_uri=' + OAUTH2_REDIRECT_URI;
 
 
-   /* const store = useAuthStore()
+    const store = useAuthStore()
     const emailForLogin = ref()
     const passwordForLogin = ref()
     const tryLogin = function () {
       console.log('Start Login: ' + emailForLogin.value + ' ' + passwordForLogin.value)
       store.tryLogin(emailForLogin.value, passwordForLogin.value)
     }
-    const canSendForm = store.Sending
+    /*const canSendForm = store.Sending*/
     const canSendLoginForm = store.Sending
 
-    const login = ref()
-    const email = ref()
-    const password = ref()
-    const password_confirmation = ref()
-    const registerCheck = ref()
+    /* const login = ref()
+     const email = ref()
+     const password = ref()
+ /*  const registerCheck = ref()
 
-    const tryCreateUser = function () {
-      console.log('Start Creating: ')
-      store.tryRegister(email.value, login.value, password.value, password_confirmation.value, registerCheck.value)
-    }
-*/
+     const tryCreateUser = function () {
+       console.log('Start Creating: ')
+       store.tryRegister(email.value, login.value, password.value, password_confirmation.value, registerCheck.value)
+     }*/
+
     return {
-      /*emailForLogin,
+      emailForLogin,
       passwordForLogin,
       tryLogin,
-      canSendForm,
       canSendLoginForm,
-      tryCreateUser,
+     /* tryCreateUser,canSendForm,
       login,
       email,
       password,

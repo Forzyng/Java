@@ -126,27 +126,21 @@ export const useUserStore = defineStore('user', {
             const data = new FormData()
             data.append('login', login);
 
-            api.post('/get-user-login', data)
+            api.post('/get-user-by-login', data)
                 .then(res=> {
                     console.log(res)
-                        if(res.token)
-                        {
-                            const AuthStore = useAuthStore()
-                            AuthStore.rememberJwt(res.token)
-                            toast.info( "Try again" )
-                        }
                         if(res.error)
                         {
-                            toast.error(res.error)
+                            toast.error(res.message)
                         }
                         else {
                             if (res) {
                                 toast.success("Loaded")
                                 console.log(res)
                                 this.userLast = res
-                                //this.isLoaded = true
+                                this.isLoaded = true
 
-                                this.getUsersPosts(this.userLast.id)
+                                //this.getUsersPosts(this.userLast.id)
                             }
                         }
                 })
@@ -204,17 +198,8 @@ export const useUserStore = defineStore('user', {
         },
 
 
-
-
-
-
-
-
-
-
-
          apiTryUpdatePolicyUser (newPassword, newPasswordConfirm) {
-
+             const auth = useAuthStore()
              const toast = useToastStore()
             console.log('Try to update')
             const password = newPassword
@@ -228,57 +213,51 @@ export const useUserStore = defineStore('user', {
                     toast.error( "Invalid Password Confirmation" )
                     return false
                 }
-             const data = new FormData()
-             data.append('password', newPassword);
-             data.append('password_confirmation', newPasswordConfirm);
-             data.append('id', this.user.id)
+             //const data = new FormData()
+             const data = {password: newPassword}
+             //data.append('password', newPassword);
 
+             console.log('Fetch')
+             fetch('http://localhost:8080/update-user', {
+                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
+                 mode: 'cors', // no-cors, *cors, same-origin
+                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+                 credentials: 'same-origin', // include, *same-origin, omit
+                 headers: {
+                     Authorization: 'Bearer ' + auth.jwt,
+                     'Content-Type': 'application/json'
+                     // 'Content-Type': 'application/x-www-form-urlencoded',
+                 },
+                 redirect: 'follow', // manual, *follow, error
+                 referrerPolicy: 'no-referrer', // no-referrer, *client
+                 body: JSON.stringify(data)
+                 //body: data // body data type must match "Content-Type" header
+             })
+                 .then(res => {
+                         return res.json()
+                     }
+                 )
+                 .then(json => {
+                     console.log(json);
+                     if(json.success)
+                     {
+                         this.updateUser(json.user)
+                         toast.success( json.message )
+                     }
+                     else {
 
-            console.log('Fetch')
-            fetch('http://127.0.0.1:8000/api/UpdateUserPrivacy', {
-                method: 'POST', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, *cors, same-origin
-                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'same-origin', // include, *same-origin, omit
-                headers: {
-                    Authorization: "bearer " + localStorage.getItem('jwt')
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                redirect: 'follow', // manual, *follow, error
-                referrerPolicy: 'no-referrer', // no-referrer, *client
-                body: data // body data type must match "Content-Type" header
-            })
-                .then(res => {
+                         toast.error( json.message )
+                     }
 
-                        return res.json()
+                     router.push('/my-profile')
+                     // this.$router.push({ name: 'login', query: { redirect: '/' } })
+                 })
+                 .catch(err => {
+                     toast.error( err )
 
-                })
-                .then(json => {
-
-                    console.log(json)
-
-                    if(!json.error)
-                    {
-                        this.updateUser(json)
-                        toast.success( "User updated" )
-                    }
-                    else {
-                        if(json.token)
-                        {
-                            const AuthStore = useAuthStore()
-                            AuthStore.rememberJwt(json.token)
-                            toast.info( "Try again" )
-                        }
-                        toast.error( json.error )
-                    }
-                    router.push('/my-profile')
-                    // dispatch('nullingData')
-                    // this.$router.push({ name: 'home' })
-                })
-                .catch(err => {
-                    toast.error( err )
-
-                })
+                     // commit('Updating', false)
+                     // dispatch('nullingData')
+                 })
         },
         UpdateAvatar (image) {
 
@@ -287,16 +266,15 @@ export const useUserStore = defineStore('user', {
 
             const data = new FormData()
             data.append("image", image);
-            data.append('id', this.user.id)
 
             console.log('Fetch')
-            fetch('http://127.0.0.1:8000/api/UpdateUser', {
+            fetch('http://127.0.0.1:8000/update-user', {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
                 credentials: 'same-origin', // include, *same-origin, omit
                 headers: {
-                    Authorization: "bearer " + localStorage.getItem('jwt')
+                    Authorization: "Bearer " + localStorage.getItem('jwt')
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 redirect: 'follow', // manual, *follow, error
@@ -312,20 +290,14 @@ export const useUserStore = defineStore('user', {
 
                     console.log(json)
 
-                    if(!json.error)
+                    if(json.success)
                     {
-                        this.updateUser(json)
-                        toast.success( "User avatar updated" )
+                        this.updateUser(json.user)
+                        toast.success( json.message )
                     }
                     else {
-                        if(json.token)
-                        {
-                            const AuthStore = useAuthStore()
-                            AuthStore.rememberJwt(json.token)
-                            toast.info( "Try again" )
-                        }
 
-                        toast.error( json.error )
+                        toast.error( json.message )
                     }
                     router.push('/my-profile')
                     // dispatch('nullingData')
@@ -340,61 +312,66 @@ export const useUserStore = defineStore('user', {
 
         tryUpdateUser (newFullname, newDescription) {
             const toast = useToastStore()
+            const auth = useAuthStore()
             console.log('Try to update')
-            if (/\d/.test(newFullname.value)) {
-                return false
-            }
+
 
             if(newFullname !== undefined && newDescription !== undefined && newDescription !== '' && newFullname !== '')
             {
-            const data = new FormData()
-            data.append('id', this.user.id)/*
-            data.append("image", image);*/
+                //const data = { name: newFullname, description: newDescription}
+                const data = {}
+            //const data = new FormData()
                 if(newFullname !== null && newFullname !== '' && newFullname !== undefined)
                 {
-                    data.append('name', newFullname);
+                    if (/\d/.test(newFullname.value)) {
+
+                    }
+                    else {
+                        data['name'] = newFullname
+                        console.log(newFullname)
+                    }
+
+                    //data.append('name', newFullname);
                 }
 
                 if(newDescription !== null && newDescription !== '' && newDescription !== undefined)
                 {
-                    data.append('description', newDescription);
+                    data['description'] = newDescription
+                    console.log(newDescription)
+                    //data.append('description', newDescription);
                 }
 
+                console.log(data)
             console.log('Fetch')
-            fetch('http://127.0.0.1:8000/api/UpdateUser', {
+            fetch('http://localhost:8080/update-user', {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
                 mode: 'cors', // no-cors, *cors, same-origin
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
                 credentials: 'same-origin', // include, *same-origin, omit
                 headers: {
-                    Authorization: "bearer " + localStorage.getItem('jwt')
+                    Authorization: 'Bearer ' + auth.jwt,
+                    'Content-Type': 'application/json'
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 redirect: 'follow', // manual, *follow, error
                 referrerPolicy: 'no-referrer', // no-referrer, *client
-                body: data // body data type must match "Content-Type" header
+                body: JSON.stringify(data)
+                //body: data // body data type must match "Content-Type" header
             })
                 .then(res => {
                             return res.json()
                     }
                 )
                 .then(json => {
-
-
                     console.log(json);
-                    if(!json.error)
+                    if(json.success)
                     {
-                        this.updateUser(json)
-                        toast.success( "User updated" )
+                        this.updateUser(json.user)
+                        toast.success( json.message )
                     }
                     else {
-                        if(json.token)
-                        {
-                            const AuthStore = useAuthStore()
-                            AuthStore.rememberJwt(json.token)
-                            toast.info( "Try again" )
-                        }
-                        toast.error( json.error )
+
+                        toast.error( json.message )
                     }
 
                     router.push('/my-profile')

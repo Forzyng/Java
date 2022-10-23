@@ -21,28 +21,18 @@ export const useAuthStore = defineStore('auth', {
             const data = new FormData()
             data.append('id', userStore.user.id);
 
-            api.post('/delete-user', data)
+            api.get('/delete-user')
                 .then(res=> {
                     console.log(res)
-                    // toast.success( "Loaded" )
-                    if(res.token)
-                    {
-                        const AuthStore = useAuthStore()
-                        AuthStore.rememberJwt(res.token)
-                        toast.info( "Try again" )
-                    }
                     if(res.error)
                     {
-                        toast.error( res.error )
+                        toast.error( res.message )
                     }
                     else {
-
-
                         if(res)
                         {
                             this.UserLogout();
-                            router.push('/login')
-
+                            //router.push('/login')
                         }
                     }
 
@@ -63,33 +53,7 @@ export const useAuthStore = defineStore('auth', {
                 toast.error(err)
                 this.Sending = false
             }
-            /*
-            const userStore = useUserStore()
-            const data = new FormData()
-            data.append('user', userStore.user);
-            api.post('/auth/logout', data)
-                .then(res=> {
-                    console.log(res)
-                    if(res.error)
-                    {
-                        toast.error( res.error )
-                    }
-                    else {
 
-
-                        if(res)
-                        {
-                            this.forgetJwt();
-                            const curUser = useUserStore();
-                            curUser.forgetUser();
-                            localStorage.clear()
-                            console.log("Storage clear")
-                            router.push('/login')
-
-                        }
-                    }
-
-                })*/
 
 
         },tryAuth () {
@@ -109,44 +73,11 @@ export const useAuthStore = defineStore('auth', {
                             const curUser = useUserStore();
                             curUser.updateUser(res)
                             console.log(res)
-                            //router.push('/my-profile')
+                            router.push('/my-profile')
                         }
                     }
 
                 })
-           /* const toast = useToastStore()
-            console.log('Try to auth')
-
-
-            fetch('http://localhost:8080/user/me', {
-                method: 'GET', // *GET, POST, PUT, DELETE, etc.
-                mode: 'cors', // no-cors, *cors, same-origin
-                cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-                credentials: 'same-origin', // include, *same-origin, omit
-                headers: {
-                    'Authorization': 'Bearer ' + this.jwt
-                    //'Content-Type': 'application/json'
-                    // 'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                redirect: 'follow', // manual, *follow, error
-                referrerPolicy: 'no-referrer', // no-referrer, *client
-            })
-                .then(res => {
-                    return res.json();
-                })
-                .then(json => {
-                    console.log(json)
-                    toast.success("User authorized")
-                    const curUser = useUserStore();
-                    curUser.updateUser(json)
-                    console.log(json)
-                    // this.$router.push({ name: 'home' })
-                    //router.push('/my-profile')
-                })
-                .catch(err => {
-                    toast.error(err)
-                    this.Sending = false
-                })*/
         },
         tryLogin (email, password) {
             const toast = useToastStore()
@@ -164,9 +95,12 @@ export const useAuthStore = defineStore('auth', {
             this.Sending = true
             console.log('Fetch')
 
-            const data = new FormData()
+            const data = { email: email, password: password };
+
+            console.log(data)
+            /*const data = new FormData()
             data.append('email', email);
-            data.append('password', password);
+            data.append('password', password);*/
 
             fetch('http://localhost:8080/auth/login', {
                 method: 'POST', // *GET, POST, PUT, DELETE, etc.
@@ -174,27 +108,30 @@ export const useAuthStore = defineStore('auth', {
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
                 credentials: 'same-origin', // include, *same-origin, omit
                 headers: {
-                    //'Content-Type': 'application/json'
+                    'Content-Type': 'application/json'
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 redirect: 'follow', // manual, *follow, error
                 referrerPolicy: 'no-referrer', // no-referrer, *client
-                body: data // body data type must match "Content-Type" header
+                body: JSON.stringify(data) // body data type must match "Content-Type" header
             })
                 .then(res => {
                     return res.json();
                 })
                 .then(json => {
-                    console.log(json)
-                    toast.success("User authorized")
-                    this.Sending = false
-                    this.rememberJwt(json.authorisation.token)
-                    const curUser = useUserStore();
-                    curUser.updateUser(json.user)
-                    console.log(json.user)
-                    console.log(json.authorisation.token)
-                    // this.$router.push({ name: 'home' })
-                    router.push('/my-profile')
+                    if(json.error )
+                    {
+                        console.log(json.message)
+                        this.Sending = false
+                    }
+                    else {
+                        console.log(json)
+                        toast.success("User authorized")
+                        this.Sending = false
+                        this.rememberJwt(json.accessToken)
+                        this.tryAuth()
+                    }
+
                 })
                 .catch(err => {
                     toast.error(err)
@@ -202,7 +139,7 @@ export const useAuthStore = defineStore('auth', {
                 })
             //this.Sending = false
         },
-        tryRegister(email, login, password, password_confirmation, registerCheck)
+        tryRegister(email, login, password, registerCheck)
         {
             const toast = useToastStore()
             console.log('Try create')
@@ -210,7 +147,6 @@ export const useAuthStore = defineStore('auth', {
                 login: login,
                 email: email,
                 password: password,
-                password_confirmation: password_confirmation,
                 registerCheck: registerCheck
             }
             this.validateRegForm(newUser)
@@ -223,12 +159,13 @@ export const useAuthStore = defineStore('auth', {
             this.Sending = true
             console.log('Fetch')
 
-            const data = new FormData()
+            const data = { email: email, password: password, login: login };
+
+            console.log(data)
+            /*const data = new FormData()
             data.append('email', email);
             data.append('password', password);
-            data.append('login', login);
-            data.append('password_confirmation', password_confirmation);
-            data.append('name', login);
+            data.append('login', login);*/
 
 
             fetch('http://localhost:8080/auth/register', {
@@ -237,56 +174,55 @@ export const useAuthStore = defineStore('auth', {
                 cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
                 credentials: 'same-origin', // include, *same-origin, omit
                 headers: {
-                    //'Content-Type': 'application/json'
+                    'Content-Type': 'application/json'
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 redirect: 'follow', // manual, *follow, error
                 referrerPolicy: 'no-referrer', // no-referrer, *client
-                body: data // body data type must match "Content-Type" header
+                body: JSON.stringify(data) // body data type must match "Content-Type" header
             })
                 .then(res => {
                     return res.json();
                 })
                     .then(json => {
-                            console.log(json)
-                            toast.success("User created")
-                        if(json.authorisation.token)
+                        if(json.error )
                         {
-                            this.rememberJwt(json.authorisation.token)
-                            const curUser = useUserStore();
-                            curUser.updateUser(json.user)
-                            console.log(json.user)
-                            console.log(json.authorisation.token)
-                            router.push('/my-profile')
+                            console.log(json)
+                            toast.error(json.message)
                         }
-
-
+                        else {
+                            if(json)
+                            {
+                                console.log(json)
+                                toast.success(json.message)
+                            }
+                            else
+                            {
+                                toast.info("Smth went wrong")
+                            }
+                        }
                         this.Sending = false
                             // this.$router.push({ name: 'home' })
-                            // TODO  уйти на другой маршрут, сообщить что все хорошо
                         })
                             .catch(err => {
                                 toast.error(err)
                                 this.Sending = false
                             })
 
-                        /*api.post('/auth/register', data)
-                            .then(res=> {
-                                //toast.success("User created")
-                            })*/
+
 
         },
         validateRegForm (data) {
             this.ErrorsValidation = null
-            if (data.email === null) { this.ErrorsValidation =  'Email required' }
-            if (data.password === null) { this.ErrorsValidation = 'Password required' }
-            if (data.login === null) { this.ErrorsValidation = 'Login required' }
-            if (data.registerCheck === false) {  this.ErrorsValidation = 'You need to be agree with our privacy' }
+            if (data.email === null || data.email === '' || data.password === undefined) { this.ErrorsValidation =  'Email required' }
+            if (data.password === null || data.password === '' || data.password === undefined) { this.ErrorsValidation = 'Password required' }
+            if (data.login === null || data.login === '' || data.login === undefined) { this.ErrorsValidation = 'Login required' }
+            if (data.registerCheck !== true ) {  this.ErrorsValidation = 'You need to be agree with our privacy' }
         },
         validateLoginForm (data) {
             this.ErrorsValidation = null
-            if (data.password === null ) { this.ErrorsValidation =  'Invalid Attemp' }
-            if (data.login === null ) { this.ErrorsValidation =  'Invalid Attemp' }
+            if (data.password === null || data.password === '' || data.password === undefined ) { this.ErrorsValidation =  'Invalid Attemp' }
+            if (data.email === null || data.email === '' || data.email === undefined ) { this.ErrorsValidation =  'Invalid Attemp' }
         },
         rememberJwt(jwt) {
             this.jwt = jwt
