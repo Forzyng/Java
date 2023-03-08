@@ -62,9 +62,9 @@
 </template>
 
 <script>
-import {usePostStore} from "../../store/posts";
+import {usePostStore} from "../../stores/posts";
 import {ref} from "vue";
-import LoadingComponent from "../Loading/LoadingComponent";
+import LoadingComponent from "../Loading/LoadingComponent.vue";
 
 export default {
     name: "CreatePost",

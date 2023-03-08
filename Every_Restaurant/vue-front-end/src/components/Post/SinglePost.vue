@@ -78,10 +78,10 @@
 </template>
 
 <script>
-//import {usePostStore} from "../../store/posts";
+//import {usePostStore} from "../../stores/posts";
 import { useRouter, useRoute } from 'vue-router'
-import {usePostStore} from "../../store/posts";
-import LoadingComponent from "../Loading/LoadingComponent";
+import {usePostStore} from "../../stores/posts";
+import LoadingComponent from "../Loading/LoadingComponent.vue";
 
 export default {
     name: "SinglePost",

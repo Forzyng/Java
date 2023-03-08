@@ -109,9 +109,9 @@
 </template>
 
 <script>
-import {useUserStore} from "../../store/user";
+import {useUserStore} from "../../stores/user";
 import { useRouter, useRoute } from 'vue-router'
-import LoadingComponent from "../Loading/LoadingComponent";
+import LoadingComponent from "../Loading/LoadingComponent.vue";
 
 export default {
     name: "OneUserProfile",

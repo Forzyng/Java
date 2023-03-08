@@ -80,9 +80,9 @@
 </template>
 
 <script>
-import LoadingComponent from "../Loading/LoadingComponent";
-import {usePostStore} from "../../store/posts";
-import {useRoute} from "vue-router/dist/vue-router";
+import LoadingComponent from "../Loading/LoadingComponent.vue";
+import {usePostStore} from "../../stores/posts";
+import {useRoute} from "vue-router";
 import {ref} from "vue";
 export default {
     name: "RedactPost",
