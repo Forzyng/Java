@@ -8,7 +8,7 @@
             <div class="container_12">
                 <div class="grid_8">
                     <h2>This week's best proposals </h2>
-                    <div class="img_inner ident-right-1 fleft"><img src="/frontend/images/250x156_img4.jpg" alt=""></div>
+                    <div class="img_inner ident-right-1 fleft"><!--<img src="../assets//images/250x156_img4.jpg" alt="">--></div>
                     <div class="extra_wrapper">
                         <p class="text1"><a href="#" class="link1">Quisque nulla. Vestibulum libero nisl, porta vel, sceleris
                             que eget, malesuada at, neque. Vivamus eget nibh.</a></p>
@@ -134,8 +134,8 @@
 </template>
 
 <script>
-import {usePostStore} from "../store/posts";
-import LoadingComponent from "../components/Loading/LoadingComponent";
+import {usePostStore} from "../stores/posts";
+import LoadingComponent from "../components/Loading/LoadingComponent.vue";
 
 export default {
     name: "PostsPage",
